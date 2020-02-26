@@ -1,52 +1,51 @@
 ﻿using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
-    //public Transform Camera;
+    public Transform Camera;
+    float TranslationStep = 100f;
+    float RotationStep = 100f;
 
-    //public float rotationStep = 150;
-    //public float translationStep = 150;
-
-    //public Vector3 TV;
-    //public Vector3 RV;
+    private Vector3 Translation;
+    private Vector3 Rotation;
 
     void Update()
     {
-        /*
-        TV = Vector3.zero;
-        RV = Vector3.zero;
+        //reset the vectors
+        Translation = Vector3.zero;
+        Rotation = Vector3.zero;
 
         //Translation controls
         if (Input.GetKey(KeyCode.W))
         {
             Debug.Log("Forward");
-            RV.z = translationStep;
+            Translation.z += TranslationStep;
         }
         if (Input.GetKey(KeyCode.S))
         {
             Debug.Log("Backward");
-            RV.z = - translationStep;
+            Translation.z -= TranslationStep;
         }
         if (Input.GetKey(KeyCode.A))
         {
             Debug.Log("Left");
-            RV.x = translationStep;
+            Translation.x -= TranslationStep;
         }
         if (Input.GetKey(KeyCode.D))
         {
             Debug.Log("Right");
-            RV.x = - translationStep;
+            Translation.x += TranslationStep;
         }
 
         if (Input.GetKey(KeyCode.Q))
         {
             Debug.Log("Up");
-            RV.y = translationStep;
+            Translation.y += TranslationStep;
         }
         if (Input.GetKey(KeyCode.E))
         {
             Debug.Log("Down");
-            RV.y = - translationStep;
+            Translation.y -= TranslationStep;
         }
 
         //Rotation controls
@@ -54,39 +53,41 @@ public class FollowPlayer : MonoBehaviour
         if (Input.GetKey(KeyCode.Home))
         {
             Debug.Log("Pitch Up");
-            TV.x = rotationStep;
+            Rotation.x -= RotationStep;
         }
         if (Input.GetKey(KeyCode.End))
         {
             Debug.Log("Pitch Down");
-            TV.x = - rotationStep;
+            Rotation.x += RotationStep;
         }
 
         //Bank
-        if (Input.GetKey(KeyCode.Insert))
-        {
-            Debug.Log("Bank Left");
-            TV.z = rotationStep;
-        }
         if (Input.GetKey(KeyCode.PageUp))
         {
+            Debug.Log("Bank Left");
+            Rotation.z -= RotationStep;
+        }
+        if (Input.GetKey(KeyCode.Insert))
+        {
             Debug.Log("Bank Right");
-            TV.z = - rotationStep;
+            Rotation.z += RotationStep;
         }
 
         //Yaw
         if (Input.GetKey(KeyCode.Delete))
         {
             Debug.Log("Yaw Left");
-            TV.y = rotationStep;
+            Rotation.y -= RotationStep;
         }
         if (Input.GetKey(KeyCode.PageDown))
         {
             Debug.Log("Yaw Right");
-            TV.y = - rotationStep;
+            Rotation.y += RotationStep;
         }
-        Camera.translation += TV;
-        */
+
+        //Rotate
+        Camera.Rotate(Rotation * Time.deltaTime);
+        Camera.Translate(Translation * Time.deltaTime);
     }
 }
 
