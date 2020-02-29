@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class OrbitManager : MonoBehaviour
 {
-    public float tacometer = 0f;
     public float speed = 100f;
     private float RealSpeed;
     public Transform parentBody;
@@ -51,18 +50,17 @@ public class OrbitManager : MonoBehaviour
         {
             return;
         }
-        tacometer += volocity * Time.deltaTime;
-        theta = tacometer / (2 * Mathf.PI * radius);
+        theta = (theta + volocity / (2 * Mathf.PI * radius)) % 360;
         x = radius * Mathf.Cos(theta);
         z = radius * Mathf.Sin(theta);
         //Debug.Log(radius * (1 / Mathf.Sin(theta)) + ":" + radius * (1 / Mathf.Tan(theta)));
-        //childBody.position = new Vector3 (radius * Mathf.Cos(theta), 0, radius * Mathf.Sin(theta));
+        childBody.position = new Vector3 (radius * Mathf.Cos(theta), 0, radius * Mathf.Sin(theta));
         //childBody.position = new Vector3(x, (z * .5f) + (x * .5f) , z);  //Apex NE
         //childBody.position = new Vector3(x, (z * .5f) + (x * - .5f), z); //Apex NW
         //childBody.position = new Vector3(x, (z * - .5f) + (x * .5f), z); //Apex SE
         //childBody.position = new Vector3(x, (z * -.5f) + (x * -.5f), z);   //Apex SW
         //childBody.position = new Vector3(x, (x), z); //Apex E
-        childBody.position = new Vector3(x, (z), z);   // Apex N
+        //childBody.position = new Vector3(x, (z), z);   // Apex N
         //childBody.position = new Vector3(x, (-x), z); //Apex W
         //childBody.position = new Vector3(x, (-z), z); //Apex S
     }
