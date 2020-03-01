@@ -11,10 +11,19 @@ public class OrbitManager : MonoBehaviour
     public Transform nextBody;
     public float radius;
     public float CoupleLenght = 75;
+
+    public float startingTheta;
+    public float LongitudeOfAssendingNode = 0;
+    public float Inclination = 0;
+    public float focuseDistance = 0;
+    public float Semi_majorAxis = 0;
+    public float PerigeeDistance = 0;
+
     private float volocity;
-    private float theta;
+    private float theta = 0;
     private float x;
     private float z;
+    
 
     //arch lenght formula D = 2 * PI * radius * theta
     //rearranged theta = D / (2 * PI * radius)
@@ -24,6 +33,7 @@ public class OrbitManager : MonoBehaviour
     {
         radius = Vector3.Distance(parentBody.position, childBody.position);
         volocity = speed;
+        theta = startingTheta % 360;
         //Debug.Log(radius);
     }
 
