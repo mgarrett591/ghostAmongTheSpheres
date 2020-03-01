@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OrbitManager : MonoBehaviour
 {
-    public float speed = 100f;
+    public float speed = 50f;
     private float RealSpeed;
     public Transform parentBody;
     public Transform childBody;
@@ -51,6 +51,7 @@ public class OrbitManager : MonoBehaviour
             return;
         }
         theta = (theta + volocity / (2 * Mathf.PI * radius)) % 360;
+        Debug.Log(volocity);
         x = radius * Mathf.Cos(theta);
         z = radius * Mathf.Sin(theta);
         //Debug.Log(radius * (1 / Mathf.Sin(theta)) + ":" + radius * (1 / Mathf.Tan(theta)));

@@ -873,7 +873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
   speed: 1000
   parentBody: {fileID: 358653968}
   childBody: {fileID: 661507925}
@@ -1378,7 +1377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
   speed: 1000
   parentBody: {fileID: 358653968}
   childBody: {fileID: 1010152690}
@@ -1681,7 +1679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
   speed: 1000
   parentBody: {fileID: 1587639100}
   childBody: {fileID: 1246789018}
@@ -1793,7 +1790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
   speed: 1000
   parentBody: {fileID: 358653968}
   childBody: {fileID: 1250210973}
@@ -1905,7 +1901,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
   speed: 1000
   parentBody: {fileID: 358653968}
   childBody: {fileID: 1362605341}
@@ -2017,7 +2012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
   speed: 1000
   parentBody: {fileID: 358653968}
   childBody: {fileID: 1478902734}
@@ -2202,8 +2196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
-  speed: 1000
+  speed: 50
   parentBody: {fileID: 358653968}
   childBody: {fileID: 1587639100}
   nextBody: {fileID: 0}
@@ -2255,7 +2248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
   speed: 1000
   parentBody: {fileID: 358653968}
   childBody: {fileID: 1728435194}
@@ -2367,7 +2359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d3b4cd5ca3824d9df4bc82bf02e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tacometer: 0
   speed: 1000
   parentBody: {fileID: 358653968}
   childBody: {fileID: 2037363348}
